@@ -81,7 +81,7 @@ const SiswaDetail = () => {
             <div className="detail-photo">
               {siswa.foto ? (
                 <img
-                  src={`http://localhost:8000/storage/siswa/${siswa.foto}`}
+                  src={`${process.env.REACT_APP_API_URL}/storage/siswa/${siswa.foto}`}
                   alt={siswa.nama}
                   className="profile-image"
                 />

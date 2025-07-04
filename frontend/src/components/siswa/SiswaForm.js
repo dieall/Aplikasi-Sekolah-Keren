@@ -45,7 +45,7 @@ const SiswaForm = () => {
       });
       
       if (siswa.foto) {
-        setPreview(`http://localhost:8000/storage/siswa/${siswa.foto}`);
+        setPreview(`${process.env.REACT_APP_API_URL}/storage/siswa/${siswa.foto}`);
       }
     } catch (error) {
       setError('Gagal memuat data siswa');

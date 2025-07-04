@@ -36,7 +36,7 @@ const Login = () => {
   const testConnection = async () => {
     try {
       setDebugInfo('Testing connection...');
-      const response = await fetch('http://localhost:8000/api/login', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/login`, {
         method: 'OPTIONS'
       });
       setDebugInfo('Connection test result: ' + response.status + ' ' + response.statusText);

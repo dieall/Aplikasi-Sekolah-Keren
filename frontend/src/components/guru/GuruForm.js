@@ -52,7 +52,7 @@ const GuruForm = () => {
       });
       
       if (guru.foto) {
-        setPreview(`http://localhost:8000/storage/guru/${guru.foto}`);
+        setPreview(`${process.env.REACT_APP_API_URL}/storage/guru/${guru.foto}`);
       }
     } catch (error) {
       setError('Gagal memuat data guru');

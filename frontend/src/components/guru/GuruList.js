@@ -86,7 +86,7 @@ const GuruList = () => {
             <div className="guru-photo-container">
               {guru.foto ? (
                 <img
-                  src={`http://localhost:8000/storage/guru/${guru.foto}`}
+                  src={`${process.env.REACT_APP_API_URL}/storage/guru/${guru.foto}`}
                   alt={guru.nama}
                   className="guru-photo"
                   onError={(e) => {
